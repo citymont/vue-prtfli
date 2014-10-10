@@ -8,6 +8,7 @@ Small dynamic website configurated with one JSON & Vue.js
 ```
 $ npm install
 $ npm run dev
+$ grunt connect
 ```
 
 ## Dependencies
