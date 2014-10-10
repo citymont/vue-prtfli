@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "watchify assets/js/main.js -o bundle.js | uglifyjs -c > bundle.js",
+    "dev": "watchify assets/js/main.js -o bundle.js",
     "prod": "browserify assets/js/main.js -d | uglifyjs -c > bundle.js"
   },
   "devDependencies": {
