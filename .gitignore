@@ -1,0 +1,5 @@
+/node_modules/
+*.old.html
+/assets/js/*.old.js
+/assets/js/*.min.js
+.DS_Store

@@ -1,0 +1,29 @@
+{
+    "currentView" : "view2",
+    "pageActive" : "",
+    "homeTitre" : "Hello World Home",
+    "homeContent": "home content",
+    "pages": {
+        "model": {
+            "title": "",
+            "titleMenu": "",
+            "content": ""
+            },
+        "new-york" : {
+            "title": "Vivre à New York",
+            "titleMenu": "New York",
+            "content": "Light through the reclaimed stained glass windows of the house on the little toy I bought for my son from the local toy store in town."
+            },
+        "lisbonne" : {
+            "title": "Manger à Lisbonne",
+            "titleMenu": "Lisbonne",
+            "content": "Discover San Francisco, Lisbon and Aix-en-Provence and met great people who love where they live and know how to communicate their passion. One of my host became a friend and we are seeing each other regularly now, a great adventure!"
+            },
+        "aaaa" : {
+            "title": "Visiter Londres",
+            "titleMenu": "Londres",
+            "content": "Après avoir vécu quelques temps en nouvelle Calédonie, j'ai voulu garder le contact avec la mer et j'ai décidée de m'installer à La Ciotat pour fonder ma famille. Depuis je fais découvrir à mes enfants les joies des sports nautiques et aquatiques dans cette belle région qu'est la Provence !!!"
+            }
+        }
+        
+    }

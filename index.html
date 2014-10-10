@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>vuejs page</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/assets/css/animate.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+</head>
+
+<body>
+
+    <div id="menu">
+        <a href="/home" v-on="click: transition">HOME</a>
+        <ul>
+            <li v-repeat="page: pages" class="item-{{$index}}">
+               <a href="/page/{{$key}}" data-id="{{$key}}" v-on="click: transition">{{page.titleMenu}}</a>
+           </li>
+       </ul>
+    </div>
+
+    <div id="app">
+        <p v-component="" v-view="currentView" v-with="pages" ></p>
+    </div>
+
+<script src="/bundle.js"></script>
+
+</body>
+
+</html>
