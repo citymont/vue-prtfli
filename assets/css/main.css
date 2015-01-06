@@ -433,12 +433,11 @@ th {
 /*normalize.css*/
 
 body {
+  display: none;
   width: 900px;
   margin: auto;
 }
 
 #app {
   padding: 10px;
-  overflow: hidden;
-  background-color: #eee;
 }

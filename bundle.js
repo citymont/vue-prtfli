@@ -52,7 +52,8 @@ var Vue = require('vue'),
 var App = (function () {
 	
 	var $app = document.getElementById('app'),
-		data;
+	    $body = document.body,
+	    data;
 
     return {
 
@@ -60,7 +61,7 @@ var App = (function () {
 
         	components.init();
         	this.start();
- 			this.effectEnded();
+ 		this.effectEnded();
 
         },
 
@@ -71,6 +72,7 @@ var App = (function () {
         	request
         		.get('/assets/data/data.json') // fetch json with ajax
 				.end(function(res){
+					$body.style.display = 'block';
 					parent.data = res.body;
 					parent.startVueModels(res,Vue,parent.rooterCb); // on end, start VueModels
 				});
@@ -104,14 +106,14 @@ var App = (function () {
 			app.$watch('pageActive', function (value, mutation) {
 
 				if (app.pageActive=="_root") {
-					bonzo($app).show().addClass('animated fadeIn');
+					App.effectClass();
 				} else {
 
 					if (this.pages[app.pageActive]) {
 					
 					this.pages.model.title = this.pages[app.pageActive].title;
 					this.pages.model.content = this.pages[app.pageActive].content;
-					bonzo($app).show().addClass('animated fadeIn');
+					App.effectClass();
 
 					} else {
 						/* Not found */
@@ -130,7 +132,7 @@ var App = (function () {
 			    data: App.clone(this.data),
 			    methods: {
 			    	transition : function (e) {
-			    		bonzo($app).hide();
+			    		//click menu bold
 			    	}
 			    }
 			})
@@ -160,8 +162,18 @@ var App = (function () {
 
 		effectHandler: function(){
 
-			bonzo($app).removeClass('animated');
+			if(bonzo($app).hasClass('fadeIn')) { 
+				bonzo($app).removeClass('animated fadeIn');
+			}
 
+		},
+		effectClass: function() {
+			if(bonzo($app).hasClass('animated')) { 
+				bonzo($app).removeClass('animated fadeIn'); 
+			} 
+			else { 
+				bonzo($app).addClass('animated fadeIn'); 
+			}
 		}
     };
 
