@@ -20,6 +20,18 @@ $ grunt connect
 6. Bonzo
 7. Bean
 
+## Nginx config
+
+Add this into yout vhost file
+````
+server {
+
+  location / {
+		try_files $uri /index.html;
+	}
+	
+}
+```
 
 ## Licence
 
